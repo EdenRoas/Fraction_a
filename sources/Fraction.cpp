@@ -23,7 +23,7 @@ namespace ariel
     {
         return 0;
     }
-    Fraction::~Fraction() {}
+    
     
     //Addition
     Fraction operator+(const Fraction &fra1, const Fraction &fra2)
@@ -83,11 +83,11 @@ namespace ariel
     {
         return true;
     }
-    bool operator>(const Fraction &fra1, const float scalar)
+    bool operator>(const Fraction &fra1, float scalar)
     {
         return true;
     }
-    bool operator>(const float scalar, const Fraction &fra1)
+    bool operator>(float scalar, const Fraction &fra1)
     {
         return true;
     }
@@ -100,7 +100,7 @@ namespace ariel
     {
         return true;
     }
-    bool operator<(const float scalar, const Fraction &fra1)
+    bool operator<(float scalar, const Fraction &fra1)
     {
         return true;
     }
@@ -113,7 +113,7 @@ namespace ariel
     {
         return true;
     }
-    bool operator==(const float scalar, const Fraction &fra1)
+    bool operator==(float scalar, const Fraction &fra1)
     {
         return true;
     }
@@ -122,11 +122,11 @@ namespace ariel
     {
         return true;
     }
-    bool operator>=(const Fraction &fra1, const float scalar)
+    bool operator>=(const Fraction &fra1, float scalar)
     {
         return true;
     }
-    bool operator>=(const float scalar, const Fraction &fra1)
+    bool operator>=(float scalar, const Fraction &fra1)
     {
         return true;
     }
@@ -135,11 +135,11 @@ namespace ariel
     {
         return true;
     }
-    bool operator<=(const Fraction &fra1, const float scalar)
+    bool operator<=(const Fraction &fra1, float scalar)
     {
         return true;
     }
-    bool operator<=(const float scalar, const Fraction &fra1)
+    bool operator<=(float scalar, const Fraction &fra1)
     {
         return true;
     }
@@ -165,13 +165,13 @@ namespace ariel
         return fra_ans;
     }
     // Input & Output
-    ostream &operator<<(ostream &os, const Fraction &fra1)
+    ostream &operator<<(ostream &ostream, const Fraction &fra1)
     {
-        return os;
+        return ostream;
     }
 
-    istream &operator>>(istream &is, Fraction &fra1)
+    istream &operator>>(istream &istream, Fraction &fra1)
     {
-        return is;
+        return istream;
     }
 }

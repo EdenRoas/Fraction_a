@@ -23,7 +23,7 @@ namespace ariel
         Fraction();
 
         Fraction(int num ,int den);
-        ~Fraction();
+        
         
         // Addition
         friend Fraction operator+(const Fraction &fra1, const Fraction &fra2);
@@ -48,25 +48,25 @@ namespace ariel
 
          // comparison operators (<, >, <=, >=, ==, !=)
         friend bool operator>(const Fraction &fra1, const Fraction &fra2);
-        friend bool operator>(const Fraction &fra1, const float scalar);
-        friend bool operator>(const float scalar, const Fraction &fra1);
+        friend bool operator>(const Fraction &fra1, float scalar);
+        friend bool operator>(float scalar, const Fraction &fra1);
 
         friend bool operator<(const Fraction &fra1, const Fraction &fra2);
-        friend bool operator<(const Fraction &fra1, const float scalar);
-        friend bool operator<(const float scalar, const Fraction &fra1);
+        friend bool operator<(const Fraction &fra1, float scalar);
+        friend bool operator<(float scalar, const Fraction &fra1);
 
         friend bool operator==(const Fraction &fra1, const Fraction &fra2);
-        friend bool operator==(const Fraction &fra1, const float scalar);
-        friend bool operator==(const float scalar, const Fraction &fra1);
+        friend bool operator==(const Fraction &fra1, float scalar);
+        friend bool operator==(float scalar, const Fraction &fra1);
 
         //friend bool operator!=(const Fraction &fra1, const Fraction &fra2);
         friend bool operator>=(const Fraction &fra1, const Fraction &fra2);
-        friend bool operator>=(const Fraction &fra1, const float scalar);
-        friend bool operator>=(const float scalar, const Fraction &fra1);
+        friend bool operator>=(const Fraction &fra1, float scalar);
+        friend bool operator>=(float scalar, const Fraction &fra1);
 
         friend bool operator<=(const Fraction &fra1, const Fraction &fra2);
-        friend bool operator<=(const Fraction &fra1, const float scalar);
-        friend bool operator<=(const float scalar, const Fraction &fra1);
+        friend bool operator<=(const Fraction &fra1, float scalar);
+        friend bool operator<=(float scalar, const Fraction &fra1);
         
         // Increment and decrement operators
         //postfix y = x++ ->return the original num and then increment
@@ -78,8 +78,8 @@ namespace ariel
         
         
         // Input and output
-        friend ostream &operator<<(ostream &os, const Fraction &fra1);
-        friend istream &operator>>(istream &os, Fraction &fra1);
+        friend ostream &operator<<(ostream &ostream, const Fraction &fra1);
+        friend istream &operator>>(istream &ostream, Fraction &fra1);
     };
 
 };
