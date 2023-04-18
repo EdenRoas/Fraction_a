@@ -22,6 +22,8 @@ using namespace ariel;
     Fraction a(2,3),g(2,3);
     Fraction b(1,3),h(4,3);
     Fraction c(1,2),i(2,4);
+    Fraction d(1,4),j(-1,3);
+    Fraction e(8,1),f(1,0);
     Fraction ze1;
     Fraction ze2;
     Fraction ze3;
@@ -36,6 +38,7 @@ using namespace ariel;
         CHECK_THROWS(b / 0);
         CHECK_THROWS(c / 0);
         CHECK_THROWS(i / 0);
+        CHECK(j / f == j);
 
     }
     
@@ -65,7 +68,6 @@ TEST_CASE("Correct input - correct answers")
         CHECK_NOTHROW(num * b);
         CHECK_NOTHROW(num / b);
         CHECK(a + b == f);
-        CHECK(j / f == j);
         CHECK(c - num == 0);
         CHECK(num - c == 0);
         CHECK(a == g);
